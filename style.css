@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: arial;
+}
+
+#container {
+    width: 800px;
+    height: 300px;
+    position: relative;
+    margin: 10px auto;
+    
+}
+
+#container .slide-num {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: darkgray;
+    color: aliceblue;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    opacity: .8;
+    z-index: 2;
+    font-size: 20px
+}
+
+#container img {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 2s;
+}
+
+#container img.active {
+    opacity: 1
+}
+
+#controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#controls .next, #controls .prev {
+    background-color: darkgreen;
+    color: aliceblue;
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+    font-size: 22px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer
+    
+}
+
+#controls .next {
+    float: right;
+}
+
+#controls .prev {
+    float: left
+}
+
+#controls .next.disabled, #controls .prev.disabled {
+    opacity: .5;
+    cursor: no-drop
+}
+
+#controls .navigator {
+    width: 60%;
+    float: left;
+}
+
+#controls .navigator ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 120px;
+    overflow: hidden; 
+    
+}
+
+#controls .navigator ul li {
+    line-height: 20px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin: 0 2px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: darkgray;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    float: left;
+    font-weight: bold;
+}
+
+#controls .navigator ul li.active {
+    background-color: darkgreen;
+    color: aliceblue;
+}
+
+footer {
+	margin: 220px auto;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ccc;
+	padding: 5px
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+footer p span {
+    background-color: black;
+    padding: 2px;
+    color: #fff;
+    border-radius: 5px;
+}
