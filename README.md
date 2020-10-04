@@ -14,7 +14,7 @@ Just Modern Browser like "Chrome" and a Code Editor e.g "VS"
 
 ## Built With
 
-* HML5
+* HTML5
 * CSS3
 * Pure JS
 
